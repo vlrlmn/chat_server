@@ -26,7 +26,7 @@ void handle_client_message(size_t index, std::vector<Socket> &clients, std::vect
     else {
         for (size_t j = 0; j < clients.size(); ++j) {
             if (j != index - 1) {
-                clients[j].send("Client: ", message);
+                clients[j].send("Client: " + message);
             }
         }
     }
