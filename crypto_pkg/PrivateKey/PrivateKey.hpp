@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include <list>
-#include "../helpers/BigInteger.hpp"
+#include <gmpxx.h>
 #include "../CipherText/CipherText.hpp"
 
 class PrivateKey {
     PrivateKey(std::string privKey);
-    PrivateKey(std::list<BigInteger> privKeys, BigInteger, BigInteger);
+    PrivateKey(std::list<mpz_class> privKeys, mpz_class, mpz_class);
 
     long int DecipherLong(CipherText ciphNum);
     std::string DecipherString(CipherText ciphText);

@@ -4,11 +4,11 @@
 #include <iostream>
 #include <list>
 #include "../CipherText/CipherText.hpp"
-#include "../helpers/BigInteger.hpp"
+#include <gmpxx.h>
 
 class PublicKey {
     PublicKey(std::string);
-    PublicKey(std::list<BigInteger> pubKeys);
+    PublicKey(std::list<mpz_class> pubKeys);
     CipherText Encrypt(int long ciphNum);
     CipherText Encrypt(std::string ciphText);
     std::string ToString();
